@@ -127,15 +127,15 @@ header{
 .grid-content-main{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(4,auto);
     justify-content: space-evenly;
     gap: 1.5625rem;
     grid-template-areas: 
-    "t1 t2"
-    "c1 c4"
-    "c2 c5"
-    "c3 c6"
+    "t1 t2 t2"
+    "c1 c4 c7"
+    "c2 c5 c8"
+    "c3 c6 c9"
     ;
 }
 .titulo1{
@@ -161,6 +161,15 @@ header{
 }
 .contenido6{
     grid-area: c6;
+}
+.contenido7{
+    grid-area: c7;
+}
+.contenido8{
+    grid-area: c8;
+}
+.contenido9{
+    grid-area: c9;
 }
 .article-title{
     color: white;
@@ -377,6 +386,21 @@ footer{
 
 /*----MEDIA QUERY----*/
 @media (max-width:1024px){
+    .grid-content-main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(6,auto);
+        justify-content: space-evenly;
+        gap: 1.5625rem;
+        grid-template-areas: 
+        "t1 t2"
+        "c1 c4"
+        "c2 c5"
+        "c3 c6"
+        "c7 c8"
+        "c9 0";
+}
 }
 @media (max-width:768px){
     header{
@@ -413,7 +437,10 @@ footer{
         "t2"
         "c4"
         "c5"
-        "c6"} 
+        "c6"
+        "c7"
+        "c8"
+        "c9"} 
     .contenido1{
         grid-area: c1;
         display: flex;
@@ -450,6 +477,25 @@ footer{
         align-items: center;
         flex-direction: column;
     }
+    .contenido7{
+        grid-area: c7;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido8{
+        grid-area: c8;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido9{
+        grid-area: c9;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .titulo1{
         grid-area: t1;
         text-align: center;
