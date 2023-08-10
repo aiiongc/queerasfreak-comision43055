@@ -13,7 +13,8 @@ body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-/*títulos*/
+
+/*----TÍTULOS----*/
 h1{
     color: #FF00D6;
     font-weight:lighter;
@@ -29,7 +30,6 @@ h2{
     font-weight: bold;
     font-size: 24px;
 }
-
 h4{
     letter-spacing: 7px;
     font-weight:bolder;
@@ -38,8 +38,6 @@ h4{
     color: white;
     text-shadow: white 0px 0 30px;
     margin-bottom: 10px;
-    
-
 }
 h5{
     letter-spacing: 7px;
@@ -51,6 +49,7 @@ h5{
     margin-bottom: 10px;
 }
 
+/*----HEADER----*/
 header{
     background-color: white;
     display: flex;
@@ -85,7 +84,8 @@ header{
 .navbarlista li a:hover{
     background-color: white;
 }
-/*botones de la navbar*/
+
+/*----BOTONES NAV----*/
 .home{
     background-color: red;
 }
@@ -122,7 +122,8 @@ header{
     letter-spacing: .3125rem;
     font-family:Arial, Helvetica, sans-serif;
 }
-/*contenido-body*/
+
+/*----INDEX----*/
 .grid-content-main{
     width: 100%;
     display: grid;
@@ -167,7 +168,168 @@ header{
     text-decoration: none;
     letter-spacing: 1px;
 }
-/*footer*/
+
+/*----MUSICA----*/
+.music-grid{
+    margin: 5% 15% 0 15%;
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 1.5625rem;
+    grid-template-areas: 
+    "music1 music2"
+    "music1 music3"
+    "music1 music8"
+    "music4 music5"
+    "music4 music6"
+    "music4 music7";}
+    
+    .music1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: music1;
+    }
+    .music1 img{
+        border-radius: 100%;
+    }
+    .music2{
+        grid-area: music2;
+    }
+    .music3{
+        color: white;
+        font-size: 1rem;
+        grid-area: music3;
+        text-align: justify;
+    }
+    .music4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: music4;
+    }
+    .music4 img{
+        border-radius: 100%;
+    }
+    .music5{
+        grid-area: music5;
+    }
+    .music6{
+        text-align: justify;
+        color: white;
+        grid-area: music6;
+        font-size: 1rem;
+    }
+    .music7{
+        grid-area: music7;
+    }
+    .music8{
+        grid-area: music8;
+    }
+
+    /*----TV/CINE----*/
+.grid-film{
+    margin: 80px 0 15px 0;
+    display: grid;
+    grid-template-columns:repeat(2,auto) ;
+    grid-template-rows: repeat(2, auto) ;
+    grid-template-areas: 
+    "f1 f2"
+    "f3 f4";
+}
+.article-films1 {
+    grid-area: f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-films2 {
+    grid-area: f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-films3 {
+    grid-area: f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-films4 {
+    grid-area: f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-content-films {
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+    margin: 25px 15% 100px 15%;
+}
+
+/*----ABOUT----*/
+.text-about{
+    color: white;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.galeria{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,10%);
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    gap: 10px;
+    grid-template-areas: 
+    "foto1 foto4 foto3 foto5"
+    "foto1 foto6 foto2 foto5";
+}
+.galeria div{
+    width: 100%;
+    height: 100%;
+}
+.galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.foto1{
+    grid-area: foto1;
+}
+.foto2{
+    grid-area: foto2;
+}
+.foto3{
+    grid-area: foto3;
+}
+.foto4{
+    grid-area: foto4;
+}
+.foto5{
+    grid-area: foto5;
+}
+.foto6{
+    grid-area: foto6;
+}
+
+/*----CONTACTOS----*/
+label{
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+form{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/*----FOOTER----*/
 footer{
     background-color: white;
     margin-top: 80px;
@@ -212,103 +374,10 @@ footer{
     font-size: 1rem;
     padding-top: 20px;
 }
-.music-section{
-    background-color: black;
-    margin-top: 40px;
-}
-.text-content {
-    color: white;
-    font-size: 16px;
-    line-height: 30px;
-    margin-top: 15px;
-    margin-right: 15%;
-    text-align: justify;
-}
-.img-article {
-    float: left;
-    margin-left: 80px;
-    margin-right: 15px;
-}
-.text-content-films {
-    color: white;
-    font-size: 16px;
-    line-height: 30px;
-    margin-top: 15px;
-    text-align: justify;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.article-films {
-    padding-top: 30px;
-    float: left;
-    background-color: black;
-    width: 50%;
-    text-align: center;
-    padding-bottom: 40px;
-}
-.text-about{
-    color: white;
-    text-align: justify;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-label{
-    margin-bottom: 15px;
-    margin-top: 30px;
-}
-form{
-    text-align: center;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-/*página-about*/
-.galeria{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4,10%);
-    grid-template-rows: 200px 200px;
-    justify-content: center;
-    gap: 10px;
-    grid-template-areas: 
-    "foto1 foto4 foto3 foto5"
-    "foto1 foto6 foto2 foto5";
-}
-.galeria div{
-    width: 100%;
-    height: 100%;
-}
-.galeria div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.foto1{
-    grid-area: foto1;
-}
-.foto2{
-    grid-area: foto2;
-}
-.foto3{
-    grid-area: foto3;
-}
-.foto4{
-    grid-area: foto4;
-}
-.foto5{
-    grid-area: foto5;
-}
-.foto6{
-    grid-area: foto6;
-}
 
-
+/*----MEDIA QUERY----*/
 @media (max-width:1024px){
-
 }
-
 @media (max-width:768px){
     header{
         display: flex;
@@ -389,7 +458,59 @@ form{
         grid-area: t2;
         text-align: center;
     }
-        }
+    .grid-film{
+        display: grid;
+        grid-template-columns:repeat(1,auto) ;
+        grid-template-rows: repeat(1, auto) ;
+        grid-template-areas: 
+        "f1"
+        "f2"
+        "f3"
+        "f4";
+    }
+    .article-films1 {
+        grid-area: f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films2 {
+        grid-area: f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films3 {
+        grid-area: f3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films4 {
+        grid-area: f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    .music-grid{
+        margin: 5% 15% 0 15%;
+        display: grid;
+        width: 70%;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(8, auto);
+        gap: 1.5625rem;
+        grid-template-areas: 
+        "music1"
+        "music2"
+        "music3"
+        "music8"
+        "music4"
+        "music5"
+        "music6"
+        "music7";
+    }
+    }
+    
 @media (max-width:480px){
     .galeria{
         grid-template-columns: repeat(1,auto);
