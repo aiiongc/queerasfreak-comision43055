@@ -13,12 +13,7 @@ body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-.grid-sticky-footer{
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-}
+/*títulos*/
 h1{
     color: #FF00D6;
     font-weight:lighter;
@@ -26,17 +21,13 @@ h1{
     text-align: center;
     padding-top: 75px;
     padding-bottom: 15px;
-    text-shadow: white 0px 0 50px;
+    text-shadow: white 0px 0 40px;
     letter-spacing: 7px;
 }
 h2{
     color: #FF00D6;
     font-weight: bold;
     font-size: 24px;
-}
-h3{
-    color: #FF00D6;
-    font-weight: normal;
 }
 
 h4{
@@ -77,7 +68,6 @@ header{
 .navbarlista{
     list-style: none;
     display: flex;
-    align-items: end;
     margin: 0;
     padding:0;
 }
@@ -95,30 +85,24 @@ header{
 .navbarlista li a:hover{
     background-color: white;
 }
+/*botones de la navbar*/
 .home{
     background-color: red;
-
-
 }
 .music{
     background-color: orange;
-
 }
 .tv-films{
     background-color: yellow;
-
 }
 .drag{
     background-color: greenyellow;
-
 }
 .about{
     background-color: #00A3FF;
-
 }
 .contact{
     background-color: blueviolet;
-
 }
 .music-1{
     color: orange;
@@ -138,40 +122,87 @@ header{
     letter-spacing: .3125rem;
     font-family:Arial, Helvetica, sans-serif;
 }
+/*contenido-body*/
+.grid-content-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(4,auto);
+    justify-content: space-evenly;
+    gap: 1.5625rem;
+    grid-template-areas: 
+    "t1 t2"
+    "c1 c4"
+    "c2 c5"
+    "c3 c6"
+    ;
+}
+.titulo1{
+    grid-area: t1;
+}
+.titulo2{
+    grid-area: t2;
+}
+.contenido1{
+    grid-area: c1;
+}
+.contenido2{
+    grid-area: c2;
+}
+.contenido3{
+    grid-area: c3;
+}
+.contenido4{
+    grid-area: c4;
+}
+.contenido5{
+    grid-area: c5;
+}
+.contenido6{
+    grid-area: c6;
+}
 .article-title{
     color: white;
     font-weight: lighter;
     text-decoration: none;
     letter-spacing: 1px;
 }
-.etiquetas{
-    margin-top: 20px;
+/*footer*/
+footer{
+    background-color: white;
+    margin-top: 80px;
+}
+.grid-sticky-footer{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
 }
 .links-footer{
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 .links-footer li{
-    margin-left: 40px;
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .links-footer li a{
+    padding-top: 20px;
     text-decoration: none;
     list-style: none;
     color: black;
     font-weight: bold;
 }
-footer {
-    background-color: white;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-}
 .footer-social{
-    text-align: center;
-    word-spacing: 30px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
 }
 .footer-social a{
     text-decoration: none;
@@ -179,7 +210,7 @@ footer {
 .copyright{
     text-align: center;
     font-size: 1rem;
-    margin-bottom: 20px;
+    padding-top: 20px;
 }
 .music-section{
     background-color: black;
@@ -223,66 +254,17 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.text-form{
-    color: white;
-    font-size: 16px;
-    font-weight: normal;
-}
-.img-about {
-    display: block;
-    text-align: center;
-}
-
-.grid-content-main{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(4,auto);
-    justify-content: space-evenly;
-    gap: 1.5625rem;
-    grid-template-areas: 
-    "t1 t2"
-    "c1 c4"
-    "c2 c5"
-    "c3 c6"
-    ;
-}
-.titulo1{
-    grid-area: t1;
-}
-.titulo2{
-    grid-area: t2;
-}
-.contenido1{
-    grid-area: c1;
-}
-.contenido2{
-    grid-area: c2;
-}
-.contenido3{
-    grid-area: c3;
-}
-.contenido4{
-    grid-area: c4;
-}
-.contenido5{
-    grid-area: c5;
-}
-.contenido6{
-    grid-area: c6;
-}
-
 label{
     margin-bottom: 15px;
     margin-top: 30px;
 }
-
 form{
     text-align: center;
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
 }
+/*página-about*/
 .galeria{
     width: 100%;
     display: grid;
@@ -305,7 +287,6 @@ form{
 }
 .foto1{
     grid-area: foto1;
-
 }
 .foto2{
     grid-area: foto2;
@@ -324,17 +305,24 @@ form{
 }
 
 
-@media (min-width:1024px){
+@media (max-width:1024px){
 
 }
 
 @media (max-width:768px){
-
-
     header{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .navbarlista{
+        display: flex;
+        flex-direction: row;
+        justify-content: center
+        ;
+    }
+    .navbarlista li{
+        width: 100%;
     }
     .galeria{
         grid-template-columns: repeat(2,25%);
@@ -356,11 +344,52 @@ form{
         "t2"
         "c4"
         "c5"
-        "c6"
+        "c6"} 
+    .contenido1{
+        grid-area: c1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
-
-}
-
+    .contenido2{
+        grid-area: c2;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido3{
+        grid-area: c3;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido4{
+        grid-area: c4;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido5{
+        grid-area: c5;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido6{
+        grid-area: c6;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .titulo1{
+        grid-area: t1;
+        text-align: center;
+    }
+    .titulo2{
+        grid-area: t2;
+        text-align: center;
+    }
+        }
 @media (max-width:480px){
     .galeria{
         grid-template-columns: repeat(1,auto);
@@ -375,14 +404,10 @@ form{
         "foto6"
         ;}
     .navbarlista{
-        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center
+        align-items: center;
         ;
-    }
-    .navbarlista li{
-        width: 100%;
     }
     header{
         display: flex;
@@ -405,4 +430,11 @@ form{
         align-items: center;
         justify-content: center;
     }
+    .links-footer{  
+        display: flex;
+        flex-direction: column;
+        gap: .0625rem;
+        align-items: center;
+        padding-bottom: 20px;
+}
 }
