@@ -1,0 +1,14 @@
+@mixin categorias($color){
+    color: $color;
+    text-decoration: none;
+    letter-spacing: .3125rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@mixin grid($col, $rows, $justify, $gap, $area){
+    display: grid;
+    grid-template-columns:$col;
+    grid-template-rows: $rows;
+    justify-content: $justify;
+    gap: $gap;
+    grid-template-areas: $area;
+}

@@ -1,0 +1,40 @@
+.music-grid{
+    @include grid (repeat(2,auto), repeat(6,auto), none, 1.5625rem, "music1 music2" "music1 music3" "music1 music8" "music4 music5" "music4 music6" "music4 music7");
+    margin: 5% 15% 5% 15%;
+    width: 70%;
+    .music1{
+        display: flex;
+        grid-area: music1;
+        flex-direction: column;
+        align-items: center;
+        img{
+            border-radius: 100%;
+        }
+    }
+    .music2{
+        grid-area: music2;
+    }
+    .music3{
+        grid-area: music3;
+        color: white;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .music4{        
+        grid-area: music4;
+        @extend .music1;
+    }
+    .music5{
+        grid-area: music5;
+    }
+    .music6{
+        @extend .music3;
+        grid-area: music6;
+    }
+    .music7{
+        grid-area: music7;
+    }
+    .music8{
+        grid-area: music8;
+    }
+}

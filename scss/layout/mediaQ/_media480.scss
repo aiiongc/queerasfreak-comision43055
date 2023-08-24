@@ -1,0 +1,40 @@
+@media (max-width:480px){
+    main{
+    h1{
+        font-size: 1.8rem;
+    }
+    }
+
+    header{
+        .logo{
+            img{
+                width: 150px;
+                height: auto;
+            }
+        }
+    }
+
+    .galeria{
+        align-items: center;
+        width: 90%;
+        margin: 0 5% 0 5%;
+        @include grid (repeat(1,auto), repeat(1,auto), center, none, "foto1" "foto2" "foto3" "foto4" "foto5" "foto6");
+    }
+    .music-grid{
+        margin: 5% 10% 5% 10%;
+        width: 80%;
+    }
+    .music1{
+        img{
+            border-radius: 100%;
+            width: 240px;
+            height: auto;
+        }
+    }
+    .text-about{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

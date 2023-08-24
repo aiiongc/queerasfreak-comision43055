@@ -1,0 +1,125 @@
+@media (max-width:768px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        nav{
+            width: 100%;
+            .navbarlista{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            li{
+                a{ 
+                    display: flex;
+                    padding: .625rem 1.25rem .625rem 1.25rem;
+                    border-width: 0;
+                    letter-spacing: 1px;
+                }
+            }
+            }
+        }
+    }
+    footer{
+        section{
+            .links-footer{
+                gap: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    .grid-content-main{
+        @include grid (repeat(1,auto), repeat(8,auto), center, none, "t1" "c1" "c2" "c3" "t2" "c4" "c5" "c6" "c7" "c8" "c9");
+    }
+    .contenido1{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido2{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido3{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido4{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido5{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido6{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido7{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido8{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenido9{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .titulo1{
+        text-align: center;
+    }
+    .titulo2{
+        text-align: center;
+    }
+    .galeria{
+        @include grid (repeat(2,25%), repeat(3,200px), none, none, "foto1 foto2" "foto3 foto4" "foto5 foto6");
+    }
+    .grid-film{
+        @include grid (repeat(1,auto), repeat(1,auto), none, none, "f1" "f2" "f3" "f4");
+    }
+    .article-films1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-films4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    .music-grid{
+        @include grid (repeat(1,auto), repeat(8,auto), none, 1.5625rem, "music1" "music2" "music3" "music8" "music4" "music5" "music6" "music7");
+    }
+    form{
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+} 

@@ -1,0 +1,10 @@
+@media (max-width:1024px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-content-main{
+        @include grid (repeat(2,auto), repeat(6,auto), space-evenly, 1.5625rem, "t1 t2" "c1 c4" "c2 c5" "c3 c6" "c7 c8" "c9 0");
+}
+}
