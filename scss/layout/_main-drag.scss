@@ -1,0 +1,58 @@
+.drag-grid{
+    @include grid (repeat(2,auto), repeat(6,auto), none, .625rem, "bestiah crystal" "b-t cm-t" "cheddar sasha" "c-t s-t" "kimchi hugaceo" "k-t h-t");
+    align-items: center;
+    justify-content: space-evenly;
+    .bestiah{
+        grid-area: bestiah;
+        img{
+            border-radius: 100%;
+            width: 25rem;
+            height: auto;
+        }
+    }
+    .bestiah-text{
+        grid-area: b-t;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+    .crystal{
+        grid-area: crystal;
+        @extend .bestiah;
+    }
+    .crystal-text{
+        grid-area: cm-t;
+        @extend .bestiah-text;
+    }
+    .cheddar{
+        grid-area: cheddar;
+        @extend .bestiah;
+    }
+    .cheddar-text{
+        grid-area: c-t;
+        @extend .bestiah-text;
+    }
+    .sasha{
+        grid-area: sasha;
+        @extend .bestiah;
+    }
+    .sasha-text{
+        grid-area: s-t;
+        @extend .bestiah-text;
+    }
+    .kimchi{
+        grid-area: kimchi;
+        @extend .bestiah;
+    }
+    .kimchi-text{
+        grid-area: k-t;
+        @extend .bestiah-text;
+    }
+    .hugaceo{
+        grid-area: hugaceo;
+        @extend .bestiah;
+    }
+    .hugaceo-text{
+        grid-area: h-t;
+        @extend .bestiah-text;
+    }
+}

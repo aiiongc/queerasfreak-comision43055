@@ -1,6 +1,9 @@
 body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     color: $color-sitio;
@@ -15,7 +18,13 @@ h1{
 h2{
     color: $color-sitio;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+h3{
+    color: red;
+    font-size: 1.875rem;
+    font-weight:lighter;
+    letter-spacing: .625rem;
 }
 h4{
     color: white;

@@ -16,28 +16,28 @@ header{
         }
     }
     nav{
-        .navbarlista{
+        .navbar{
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
         .home{
-            background-color: red;
+            background-color: $color-home;
         }
         .music{
-            background-color: orange;
+            background-color: $color-music;
         }
         .tv-films{
-            background-color: yellow;
+            background-color: $color-tvfilms;
         }
         .drag{
-            background-color: greenyellow;
+            background-color: $color-drag;
         }
         .about{
-            background-color: #00A3FF;
+            background-color: $color-about;
         }
         .contact{
-            background-color: blueviolet;
+            background-color: $color-contact;
         }
         li{
             a{

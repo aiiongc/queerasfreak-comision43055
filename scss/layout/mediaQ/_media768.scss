@@ -1,25 +1,26 @@
 @media (max-width:768px){
     header{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        }
         nav{
             width: 100%;
-            .navbarlista{
+            .navbar{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-            li{
-                a{ 
-                    display: flex;
-                    padding: .625rem 1.25rem .625rem 1.25rem;
-                    border-width: 0;
-                    letter-spacing: 1px;
+                align-items: end;
+                li{
+                    a{
+                        width: 9.375rem;
+                        padding: .625rem 1.25rem .625rem 1.25rem;
+                        border-width: 0 !important;
+                        letter-spacing: 1px;
+                    }
                 }
             }
-            }
         }
-    }
+    
     footer{
         section{
             .links-footer{
@@ -80,7 +81,6 @@
         align-items: center;
         flex-direction: column;
     }
-    
     .titulo1{
         text-align: center;
     }
@@ -122,4 +122,27 @@
         margin-left: 10%;
         margin-right: 10%;
     }
-} 
+    .drag-grid{
+        @include grid (repeat(1,auto), repeat(6,auto), none, .625rem, "bestiah" "b-t" "crystal" "cm-t" "cheddar" "c-t" "sasha" "s-t" "kimchi" "k-t" "hugaceo" "h-t");
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex-error{
+        gap: 1.875rem;
+        h1{
+            font-size: 1.875rem;
+            margin-top: 2.5rem;
+        }
+        p{
+            font-size: 1.5625rem;
+            margin: 0 20px 0 20px;
+        }
+        img{
+            width: 80%;
+        }
+        .button{
+            margin-top: 5rem;
+        }
+    } 
+}

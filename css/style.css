@@ -5,7 +5,10 @@
 
 body {
   background-color: black;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 h1 {
   color: #FF00D6;
@@ -20,7 +23,13 @@ h1 {
 h2 {
   color: #FF00D6;
   font-weight: bold;
-  font-size: 24px; }
+  font-size: 1.5rem; }
+
+h3 {
+  color: red;
+  font-size: 1.875rem;
+  font-weight: lighter;
+  letter-spacing: .625rem; }
 
 h4 {
   color: white;
@@ -57,24 +66,24 @@ header {
     header .logo img {
       width: 14.375rem;
       height: auto; }
-  header nav .navbarlista {
+  header nav .navbar {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0; }
-    header nav .navbarlista .home {
+    header nav .navbar .home {
       background-color: red; }
-    header nav .navbarlista .music {
+    header nav .navbar .music {
       background-color: orange; }
-    header nav .navbarlista .tv-films {
+    header nav .navbar .tv-films {
       background-color: yellow; }
-    header nav .navbarlista .drag {
+    header nav .navbar .drag {
       background-color: greenyellow; }
-    header nav .navbarlista .about {
+    header nav .navbar .about {
       background-color: #00A3FF; }
-    header nav .navbarlista .contact {
+    header nav .navbar .contact {
       background-color: blueviolet; }
-    header nav .navbarlista li a {
+    header nav .navbar li a {
       text-decoration: none;
       color: black;
       display: flex;
@@ -84,7 +93,7 @@ header {
       border-bottom-style: solid;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       letter-spacing: 1px; }
-      header nav .navbarlista li a:hover {
+      header nav .navbar li a:hover {
         background-color: white; }
 
 .grid-content-main {
@@ -210,6 +219,46 @@ header {
   text-align: justify;
   margin: 25px 15% 100px 15%; }
 
+.drag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(6, auto);
+  justify-content: none;
+  gap: 0.625rem;
+  grid-template-areas: "bestiah crystal" "b-t cm-t" "cheddar sasha" "c-t s-t" "kimchi hugaceo" "k-t h-t";
+  align-items: center;
+  justify-content: space-evenly; }
+  .drag-grid .bestiah, .drag-grid .crystal, .drag-grid .cheddar, .drag-grid .sasha, .drag-grid .kimchi, .drag-grid .hugaceo {
+    grid-area: bestiah; }
+    .drag-grid .bestiah img, .drag-grid .crystal img, .drag-grid .cheddar img, .drag-grid .sasha img, .drag-grid .kimchi img, .drag-grid .hugaceo img {
+      border-radius: 100%;
+      width: 25rem;
+      height: auto; }
+  .drag-grid .bestiah-text, .drag-grid .crystal-text, .drag-grid .cheddar-text, .drag-grid .sasha-text, .drag-grid .kimchi-text, .drag-grid .hugaceo-text {
+    grid-area: b-t;
+    margin-bottom: 5rem;
+    text-align: center; }
+  .drag-grid .crystal {
+    grid-area: crystal; }
+  .drag-grid .crystal-text {
+    grid-area: cm-t; }
+  .drag-grid .cheddar {
+    grid-area: cheddar; }
+  .drag-grid .cheddar-text {
+    grid-area: c-t; }
+  .drag-grid .sasha {
+    grid-area: sasha; }
+  .drag-grid .sasha-text {
+    grid-area: s-t; }
+  .drag-grid .kimchi {
+    grid-area: kimchi; }
+  .drag-grid .kimchi-text {
+    grid-area: k-t; }
+  .drag-grid .hugaceo {
+    grid-area: hugaceo; }
+  .drag-grid .hugaceo-text {
+    grid-area: h-t; }
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(4, 10%);
@@ -253,9 +302,15 @@ form {
   margin-left: 25%;
   margin-right: 25%; }
 
+.boton {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
 footer {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white; }
+  background-color: white;
+  margin-top: auto;
+  width: 100%; }
   footer section .links-footer {
     text-align: center;
     display: flex;
@@ -285,6 +340,37 @@ footer {
     font-size: 1rem;
     padding-top: 20px; }
 
+.error {
+  background: white;
+  background: linear-gradient(180deg, white 0%, white 66%, rgba(255, 0, 247, 0.850474) 100%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+.flex-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.125rem;
+  text-align: center; }
+  .flex-error h1 {
+    font-size: 3.125rem;
+    margin-top: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: normal; }
+  .flex-error p {
+    font-size: 2.5rem; }
+  .flex-error img {
+    width: 40%; }
+  .flex-error .button {
+    padding: .8125rem 1.875rem;
+    border-radius: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-decoration: none; }
+    .flex-error .button:hover {
+      background-color: #FF00D6; }
+
 @media (max-width: 1024px) {
   header {
     display: flex;
@@ -301,19 +387,19 @@ footer {
 @media (max-width: 768px) {
   header {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-    header nav {
-      width: 100%; }
-      header nav .navbarlista {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        header nav .navbarlista li a {
-          display: flex;
-          padding: .625rem 1.25rem .625rem 1.25rem;
-          border-width: 0;
-          letter-spacing: 1px; }
+    flex-direction: row;
+    justify-content: space-between; }
+  nav {
+    width: 100%; }
+    nav .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: end; }
+      nav .navbar li a {
+        width: 9.375rem;
+        padding: .625rem 1.25rem .625rem 1.25rem;
+        border-width: 0 !important;
+        letter-spacing: 1px; }
   footer section .links-footer {
     gap: 0;
     text-align: center;
@@ -408,14 +494,37 @@ footer {
     text-align: center;
     width: 80%;
     margin-left: 10%;
-    margin-right: 10%; } }
+    margin-right: 10%; }
+  .drag-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, auto);
+    justify-content: none;
+    gap: 0.625rem;
+    grid-template-areas: "bestiah" "b-t" "crystal" "cm-t" "cheddar" "c-t" "sasha" "s-t" "kimchi" "k-t" "hugaceo" "h-t";
+    align-items: center;
+    justify-content: center; }
+  .flex-error {
+    gap: 1.875rem; }
+    .flex-error h1 {
+      font-size: 1.875rem;
+      margin-top: 2.5rem; }
+    .flex-error p {
+      font-size: 1.5625rem;
+      margin: 0 20px 0 20px; }
+    .flex-error img {
+      width: 80%; }
+    .flex-error .button {
+      margin-top: 5rem; } }
 
 @media (max-width: 480px) {
   main h1 {
     font-size: 1.8rem; }
   header .logo img {
-    width: 150px;
+    width: 10.625rem;
     height: auto; }
+  header nav .navbar li a {
+    width: 8.125rem; }
   .galeria {
     align-items: center;
     width: 90%;
@@ -429,12 +538,18 @@ footer {
   .music-grid {
     margin: 5% 10% 5% 10%;
     width: 80%; }
-  .music1 img, .music-grid .music4 img {
-    border-radius: 100%;
-    width: 240px;
-    height: auto; }
+    .music-grid .music1 img, .music-grid .music4 img {
+      border-radius: 100%;
+      width: 240px;
+      height: auto; }
   .text-about {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 20px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .drag-grid {
+    margin: 5% 25% 5% 25%;
+    width: 50%; }
+    .drag-grid .bestiah img, .drag-grid .crystal img, .drag-grid .cheddar img, .drag-grid .sasha img, .drag-grid .kimchi img, .drag-grid .hugaceo img {
+      width: 15rem;
+      height: auto; } }

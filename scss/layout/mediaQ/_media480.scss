@@ -1,15 +1,24 @@
 @media (max-width:480px){
     main{
-    h1{
-        font-size: 1.8rem;
-    }
+        h1{
+            font-size: 1.8rem;
+        }
     }
 
     header{
         .logo{
             img{
-                width: 150px;
+                width: 10.625rem;
                 height: auto;
+            }
+        }
+        nav{
+            .navbar{
+                li{
+                    a{
+                        width: 8.125rem;
+                    }
+                }
             }
         }
     }
@@ -23,12 +32,12 @@
     .music-grid{
         margin: 5% 10% 5% 10%;
         width: 80%;
-    }
-    .music1{
-        img{
-            border-radius: 100%;
-            width: 240px;
-            height: auto;
+        .music1{
+            img{
+                border-radius: 100%;
+                width: 240px;
+                height: auto;
+            }
         }
     }
     .text-about{
@@ -36,5 +45,15 @@
         margin-right: 5%;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .drag-grid{
+        margin: 5% 25% 5% 25%;
+        width: 50%;
+        .bestiah{
+            img{
+                width: 15rem;
+                height: auto;
+            } 
+        }
     }
 }
