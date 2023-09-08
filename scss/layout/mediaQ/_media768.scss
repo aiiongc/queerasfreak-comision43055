@@ -114,7 +114,7 @@
         align-items: center;
     }    
     .music-grid{
-        @include grid (repeat(1,auto), repeat(8,auto), none, 1.5625rem, "music1" "music2" "music3" "music8" "music4" "music5" "music6" "music7");
+        @include grid (repeat(1,auto), repeat(16,auto), none, 1.5625rem, "music1" "music2" "music3" "music8" "music4" "music5" "music6" "music7" "music9" "music10" "music11" "music12" "music13" "music14" "music15" "music16");
     }
     form{
         text-align: center;

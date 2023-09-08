@@ -2,6 +2,7 @@
     @include grid (repeat(2,auto), repeat(6,auto), none, .625rem, "bestiah crystal" "b-t cm-t" "cheddar sasha" "c-t s-t" "kimchi hugaceo" "k-t h-t");
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 3.125rem;
     .bestiah{
         grid-area: bestiah;
         img{
@@ -14,6 +15,9 @@
         grid-area: b-t;
         margin-bottom: 5rem;
         text-align: center;
+        a{
+            text-decoration: none;
+        }
     }
     .crystal{
         grid-area: crystal;
